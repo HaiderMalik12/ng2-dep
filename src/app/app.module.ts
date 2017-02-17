@@ -3,13 +3,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {MaterialModule} from '@angular/material';
 import {Material2AppAppComponent, DialogContent} from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { DepartmentComponent } from './department/department.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     MaterialModule.forRoot(),
   ],
-  declarations: [Material2AppAppComponent, DialogContent, NavComponent],
+  declarations: [Material2AppAppComponent, DialogContent, NavComponent, DepartmentComponent],
   entryComponents: [DialogContent],
   bootstrap: [Material2AppAppComponent],
 })
