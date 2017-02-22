@@ -11,6 +11,8 @@
 # generated code
 aot/
 
+/to-do.md
+
 # IDEs and editors
 /.idea
 
