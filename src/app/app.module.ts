@@ -1,17 +1,19 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {MaterialModule} from '@angular/material';
-import {Material2AppAppComponent, DialogContent} from './app.component';
+
+import {AppComponent} from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { DepartmentComponent } from './department/department.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { DepartmentsComponent } from './departments/departments.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    MaterialModule.forRoot(),
+      AppRoutingModule
   ],
-  declarations: [Material2AppAppComponent, DialogContent, NavComponent, DepartmentComponent],
-  entryComponents: [DialogContent],
-  bootstrap: [Material2AppAppComponent],
+  declarations: [AppComponent, NavComponent, DepartmentComponent, DepartmentsComponent, DashboardComponent],
+  bootstrap: [AppComponent],
 })
-export class MaterialAppModule { }
+export class AppModule { }

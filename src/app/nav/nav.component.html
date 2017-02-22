@@ -1,19 +1,28 @@
-<md-sidenav-layout>
 
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
-    Sidenav
-  </md-sidenav>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">NgBridgForm</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a [routerLink]="'/departments'" class="mdl-navigation__link" href="">Departments</a>
+                <a [routerLink]="'/dashboard'" class="mdl-navigation__link" href="">Dashboard</a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+            <a [routerLink]="'/departments'" class="mdl-navigation__link" href="">Departments</a>
+            <a [routerLink]="'/dashboard'" class="mdl-navigation__link" href="">Dashboard</a>
 
-  <md-toolbar color="primary">
-    <button class="app-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content"><router-outlet></router-outlet></div>
+    </main>
 
-    BridgInformAngular2
-
-    <span class="app-toolbar-filler"></span>
-    <button md-button >Departments</button>
-    <button md-button >Users</button>
-  </md-toolbar>
-
-</md-sidenav-layout>
+</div>
