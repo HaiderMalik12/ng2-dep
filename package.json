@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^2.0.0",
     "@angular/router": "^3.0.0",
     "core-js": "^2.4.0",
+    "jquery": "^3.1.1",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.6.21"
@@ -32,6 +33,7 @@
     "@angular/platform-server": "^2.0.0",
     "@types/hammerjs": "^2.0.32",
     "@types/jasmine": "^2.2.30",
+    "@types/jquery": "^2.0.40",
     "angular-cli": "^1.0.0-beta.16",
     "codelyzer": "~0.0.26",
     "firebase-tools": "^3.0.7",

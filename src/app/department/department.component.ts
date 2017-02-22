@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
-  selector: 'app-department',
+  selector: 'bg-department',
   templateUrl: './department.component.html',
   styleUrls: ['./department.component.css']
 })
