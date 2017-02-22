@@ -9,6 +9,12 @@ export class DepartmentsComponent implements OnInit {
 
   constructor() { }
 
+   departements : [{
+     id:1,
+     name:'Physics',
+     description: 'This is my Description'
+   }];
+
   ngOnInit() {
   }
 
