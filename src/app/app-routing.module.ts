@@ -9,7 +9,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 const routes: Routes = [
     {path: 'departments', component: DepartmentsComponent},
     {path: 'departments/:id', component: DepartmentComponent},
-    {path: '', pathMatch: 'full', redirectTo: 'department'},
+    {path: '', pathMatch: 'full', redirectTo: 'departments'},
     {path: 'dashboard', component: DashboardComponent},
 ];
 
@@ -26,4 +26,4 @@ export const routableComponents = [
     DepartmentsComponent,
     DashboardComponent,
     DepartmentComponent
-]
+];
