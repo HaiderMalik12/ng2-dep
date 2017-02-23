@@ -9,7 +9,7 @@ export class DepartmentsComponent implements OnInit {
 
   constructor() { }
 
-   departements : [{
+   departments = [{
      id:1,
      name:'Physics',
      description: 'This is my Description'
