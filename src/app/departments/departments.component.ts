@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import {DepartmentsService} from "./departments.service";
-import {Department} from "./department.model";
+import {DepartmentsService} from "../models/departments.service";
+import {Department} from "../models/department.model";
 
 @Component({
-  selector: 'bg-departments',
-  templateUrl: './departments.component.html',
-  styleUrls: ['./departments.component.css']
+    selector: 'bg-departments',
+    templateUrl: './departments.component.html',
+    styleUrls: ['./departments.component.css']
 })
 export class DepartmentsComponent implements OnInit {
 
-  constructor(private departmentService : DepartmentsService) { }
+    constructor(private departmentService : DepartmentsService) { }
 
-   departments : Department[] = [];
+    departments : Department[] = [];
 
 
-  ngOnInit() {
-      this.departments = this.departmentService.getDepartments();
-  }
+    ngOnInit() {
+        this.departments = this.departmentService.getDepartments();
+    }
 
 }

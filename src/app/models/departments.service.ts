@@ -8,7 +8,7 @@ export class DepartmentsService {
 
   getDepartments(){
 
-    let departments: Department[] = [{
+    let departments : Department[] = [{
       id:1,
       name:'Physics',
       description: 'This is my Description'

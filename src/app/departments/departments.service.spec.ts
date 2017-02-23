@@ -1,5 +1,5 @@
 import { TestBed, inject } from '@angular/core/testing';
-import { DepartmentsService } from './departments.service';
+import { DepartmentsService } from '../models/departments.service';
 
 describe('DepartmentsService', () => {
   beforeEach(() => {

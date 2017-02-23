@@ -27,13 +27,49 @@ the router state.
 
 # Module 3: Services
 
-- Step 1: learn enough to get started
-- Step 2: Play around generate questions
-- STep 3: Find answers under the hood how things work
-- Step 4: Teach
+## Step 1: learn enough to get started
+
+## Step 2: Play around generate questions
+ 
+ 
+ ### Questions:
+ 
+#### How does @Injectable works ?
+ 
+ - Injectable to use inject third party services
+ - like http , VehcileService, StoryService, LoggerService,ErrorService
+ 
+ #### Why do we need Service ?
+  
+  - A service provides anything our application needs. 
+  It often shares data or functions between other angular 
+  features
+  
+  
+ #### When should you create Service?
+ 
+  - If you want to share data accross application 
+ 
+ #### What is DI ?
+ 
+ - Dependency Injection is how we provide an instance of class
+ to another Angular feature
+ 
+ #### How does component LifeCycle hooks work ?
+ 
+  - We provide services to Angular's injectors.
+  - When we inject a service. Angular searches the appropriate
+  injectors for it.
+  - One Injector for Root Component the anybody in the tree can 
+  access it.
+  
+ 
+ 
+ 
+## STep 3: Find answers under the hood how things work
+
+
+## Step 4: Teach
 
 
 -----
-
-- Refactor department array type to Department Type
-- Store all the models in models folder

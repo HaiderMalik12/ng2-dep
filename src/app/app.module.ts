@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {NavComponent} from './nav/nav.component';
 import {AppRoutingModule, routableComponents} from "./app-routing.module";
-import {DepartmentsService} from "./departments/departments.service";
+import {DepartmentsService} from "./models/departments.service";
 
 @NgModule({
     imports: [
