@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Department} from "./department.model";
 
 @Injectable()
 export class DepartmentsService {
@@ -6,7 +7,8 @@ export class DepartmentsService {
   constructor() { }
 
   getDepartments(){
-    return [{
+
+    let departments: Department[] = [{
       id:1,
       name:'Physics',
       description: 'This is my Description'
@@ -28,5 +30,6 @@ export class DepartmentsService {
       description: 'This is my Description'
     }];
 
+    return departments;
   }
 }

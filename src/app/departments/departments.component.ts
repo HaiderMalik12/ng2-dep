@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DepartmentsService} from "./departments.service";
+import {Department} from "./department.model";
 
 @Component({
   selector: 'bg-departments',
@@ -10,7 +11,7 @@ export class DepartmentsComponent implements OnInit {
 
   constructor(private departmentService : DepartmentsService) { }
 
-   departments = [];
+   departments : Department[] = [];
 
 
   ngOnInit() {

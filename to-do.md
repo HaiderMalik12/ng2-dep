@@ -31,3 +31,9 @@ the router state.
 - Step 2: Play around generate questions
 - STep 3: Find answers under the hood how things work
 - Step 4: Teach
+
+
+-----
+
+- Refactor department array type to Department Type
+- Store all the models in models folder
