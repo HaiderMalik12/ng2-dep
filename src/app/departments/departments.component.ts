@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DepartmentsService} from "./departments.service";
 
 @Component({
   selector: 'bg-departments',
@@ -7,31 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private departmentService : DepartmentsService) { }
 
-   departments = [{
-     id:1,
-     name:'Physics',
-     description: 'This is my Description'
-   },{
-     id:2,
-     name:'Node',
-     description: 'This is my Description'
-   },{
-     id:3,
-     name:'BlueBird',
-     description: 'This is my Description'
-   },{
-     id:4,
-     name:'Async',
-     description: 'This is my Description'
-   },{
-     id:5,
-     name:'Math',
-     description: 'This is my Description'
-   }];
+   departments = [];
+
 
   ngOnInit() {
+      this.departments = this.departmentService.getDepartments();
   }
 
 }
