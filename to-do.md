@@ -39,11 +39,22 @@ the router state.
  - Injectable to use inject third party services
  - like http , VehcileService, StoryService, LoggerService,ErrorService
  
+  WHat it does?
+ 
+ - A marker metadata that marks a class as available to Injector
+ for creation
+ 
+ - Because Injectors are the guys who are responsible for instantiating
+ components like HerosComponent.
+ 
+ - 
+ 
  #### Why do we need Service ?
   
   - A service provides anything our application needs. 
   It often shares data or functions between other angular 
   features
+  - t's a coding pattern in which a class receives its dependencies from external sources rather than creating them itself.
   
   
  #### When should you create Service?
@@ -55,6 +66,7 @@ the router state.
  - Dependency Injection is how we provide an instance of class
  to another Angular feature
  
+ 
  #### How does component LifeCycle hooks work ?
  
   - We provide services to Angular's injectors.
@@ -64,12 +76,28 @@ the router state.
   access it.
   
  
- 
+ #### LifeCycle hooks for Component
+  
+  - 1. onInit
+  - 2. ngOnChanges
+  - 3. ngAfterViewInit
+  - 4. ngOnChanges
+  - 5. ngOnDestroy 
  
 ## STep 3: Find answers under the hood how things work
 
 
 ## Step 4: Teach
 
+## Module # 4: http:
+
+
+Step 1: Learn enough to get started
+
+Step 2: Play around and generate questions
+
+Step 3: Answe the question
+
 
 -----
+Calling getDepartments by using http

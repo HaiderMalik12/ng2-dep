@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DepartmentsService} from "../models/departments.service";
 import {Department} from "../models/department.model";
 
@@ -9,13 +9,18 @@ import {Department} from "../models/department.model";
 })
 export class DepartmentsComponent implements OnInit {
 
-    constructor(private departmentService : DepartmentsService) { }
+    constructor(private departmentService: DepartmentsService) {
+    }
 
-    departments : Department[] = [];
+    departments: Department[] = [];
+    errorMessage: any;
 
 
     ngOnInit() {
-        this.departments = this.departmentService.getDepartments();
+        this.departmentService.getDepartments()
+            .subscribe(
+                departments => this.departments = departments,
+                error => this.errorMessage = <any>error);
     }
 
 }
