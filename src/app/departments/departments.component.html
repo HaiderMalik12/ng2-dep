@@ -7,7 +7,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let dep of departments">
+    <tr *ngFor="let dep of departments | async">
         <td>{{dep.name}}</td>
         <td>{{dep.description}}</td>
         <td><a href="#" class="btn btn-danger">Delete</a></td>

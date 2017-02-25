@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DepartmentsService} from "../models/departments.service";
 import {Department} from "../models/department.model";
+import {Observable} from "rxjs";
 
 @Component({
     selector: 'bg-departments',
@@ -12,15 +13,12 @@ export class DepartmentsComponent implements OnInit {
     constructor(private departmentService: DepartmentsService) {
     }
 
-    departments: Array<Department> = [];
+    departments: Observable<Department[]>;
     errorMessage: any;
 
 
     ngOnInit() {
-        this.departmentService.getDepartments()
-            .subscribe(
-                departments => this.departments = departments,
-                error => this.errorMessage = <any>error);
+        this.departments=this.departmentService.getDepartments();
     }
 
 }
