@@ -15,29 +15,6 @@ export class DepartmentsService {
 
   getDepartments(){
 
-    // let departments : Department[] = [{
-    //   id:1,
-    //   name:'Physics',
-    //   description: 'This is my Description'
-    // },{
-    //   id:2,
-    //   name:'Node',
-    //   description: 'This is my Description'
-    // },{
-    //   id:3,
-    //   name:'BlueBird',
-    //   description: 'This is my Description'
-    // },{
-    //   id:4,
-    //   name:'Async',
-    //   description: 'This is my Description'
-    // },{
-    //   id:5,
-    //   name:'Math',
-    //   description: 'This is my Description'
-    // }];
-    //
-    // return departments;
 
     return this.http.get(this.apiUrl)
         .map(this.extractData)
@@ -46,8 +23,7 @@ export class DepartmentsService {
   }
 
   private extractData(res: Response) {
-    let body = res.json();
-    console.log(body.data);
+    let body = <Department[]>res.json();
     return body || { };
   }
 

@@ -89,14 +89,38 @@ the router state.
 
 ## Step 4: Teach
 
+
 ## Module # 4: http:
 
+-  We use http to get and serve data with promises or Observables. We isolate
+the http calls in a shared Service.
 
-Step 1: Learn enough to get started
+- Component is handled on Observable.
 
-Step 2: Play around and generate questions
+- We Subscribe to it.
 
-Step 3: Answe the question
+1. Import the http Module.
+2. Call http.get in a Service and return the mapped result.
+3. Subscribe to the Service's function in the Component.
+
+
+## Step 1: Learn enough to get started
+
+## Step 2: Play around and generate questions
+
+ ### Q: How does http work?
+  
+ ### Q: How does observable work?
+     
+ ### Q: How does rxjs work?
+    
+ ### Q: What is map and catch in rxjs?
+    
+    
+    
+ 
+
+## Step 3: Answer the question
 
 
 -----
