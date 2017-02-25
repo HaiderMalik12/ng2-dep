@@ -113,8 +113,19 @@ the http calls in a shared Service.
  ### Q: How does observable work?
      
  ### Q: How does rxjs work?
+ 
+ - Reactive Js implements the async observable pattern
+  and is widely used in Angular2
     
  ### Q: What is map and catch in rxjs?
+ 
+ ### Q: What is async pipe ?
+ 
+ - The Async pipe received a promise or observables as
+ input and subscribes to the input, eventually emitting
+ the value(s) as changes arrive.
+ 
+ 
     
     
     
@@ -124,4 +135,6 @@ the http calls in a shared Service.
 
 
 -----
-Calling getDepartments by using http
+1. Implement Async Pipe with Observables 
+2. Create a seaprate file for rxExtensions
+

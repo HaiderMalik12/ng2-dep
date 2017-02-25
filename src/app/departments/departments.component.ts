@@ -12,7 +12,7 @@ export class DepartmentsComponent implements OnInit {
     constructor(private departmentService: DepartmentsService) {
     }
 
-    departments: Department[] = [];
+    departments: Array<Department> = [];
     errorMessage: any;
 
 
