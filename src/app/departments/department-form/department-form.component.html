@@ -1,23 +1,23 @@
-<form class="form-horizontal">
+<form class="form-horizontal" novalidate>
   <fieldset>
     <div class="form-group">
       <label for="inputName" class="col-lg-2 control-label">Name</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputName" placeholder="Department Name">
+        <input type="text" class="form-control" id="inputName" placeholder="Department Name" [(ngModel)]="department.name" name="depName">
       </div>
     </div>
 
     <div class="form-group">
       <label for="inputLocation" class="col-lg-2 control-label">Location</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputLocation" placeholder="Location">
+        <input type="text" class="form-control" id="inputLocation" placeholder="Location" [(ngModel)]="department.location" name="depLoc">
       </div>
     </div>
 
     <div class="form-group">
       <label for="inputBlock" class="col-lg-2 control-label">Block</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputBlock" placeholder="Block">
+        <input type="text" class="form-control" id="inputBlock" placeholder="Block" [(ngModel)]="department.block" name="depBlock">
       </div>
     </div>
 
@@ -25,7 +25,7 @@
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary" (click)="saveDepartment(department)" >Save</button>
       </div>
     </div>
   </fieldset>

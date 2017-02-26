@@ -137,12 +137,9 @@ the http calls in a shared Service.
  
  
     
-    
-    
- 
 
 ## Step 3: Answer the question
 
 
 -----
-1. Replace department with department-form component
+1. Create a POST Department

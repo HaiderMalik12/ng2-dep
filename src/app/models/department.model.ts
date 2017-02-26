@@ -1,5 +1,6 @@
 export  class Department {
     id : number;
     name: string;
-    description: string;
+    location: string;
+    block:string;
 }

@@ -1,27 +1,46 @@
 import { Injectable } from '@angular/core';
 import {Department} from "./department.model";
-import {Http,Response} from '@angular/http';
+import {Http, Response, RequestOptions, Headers} from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class DepartmentsService {
 
-  private apiUrl : string = 'http://localhost:1337/departments';
+  private apiUrl : string = 'http://localhost:1337';
 
   constructor(private http: Http) { }
 
   getDepartments(){
 
-    return this.http.get(this.apiUrl)
+    return this.http.get(`${this.apiUrl}/departments`)
         .map(this.extractData)
         .catch(this.handleError);
 
   }
 
+  /**
+   * This method will accept department as a input and create into db
+   * @param department
+   * @return {Object} - A newly created department
+   */
+
+  createDepartment(department){
+
+    //call the http post method
+
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+
+     return this.http.post(`${this.apiUrl}/department`,department,options)
+         .map(res => res.json())
+         .catch(this.handleError);
+
+  }
+
   deleteDepartment(departmentId) {
 
-    return this.http.delete(`http://localhost:1337/department/${departmentId}`)
+    return this.http.delete(`${this.apiUrl}/departments/${departmentId}`)
         .map(res => res.json)
         .catch(this.handleError);
 

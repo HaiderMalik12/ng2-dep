@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpModule} from '@angular/http';
+import {FormsModule} from '@angular/forms';
 import './rxjs-extension';
 
 import {AppComponent} from './app.component';
@@ -13,6 +14,7 @@ import { DepartmentFormComponent } from './departments/department-form/departmen
     imports: [
         BrowserModule,
         HttpModule,
+        FormsModule,
         AppRoutingModule
     ],
     declarations: [NavComponent, routableComponents, DepartmentFormComponent],
