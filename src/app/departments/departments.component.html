@@ -2,15 +2,15 @@
     <thead>
     <tr>
         <th>Department Name</th>
-        <th>Description</th>
+        <th>Location</th>
         <th>Delete</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let dep of departments | async">
         <td>{{dep.name}}</td>
-        <td>{{dep.description}}</td>
-        <td><a href="#" class="btn btn-danger">Delete</a></td>
+        <td>{{dep.location}}</td>
+        <td><a (click)="deleteDepartment(dep)" class="btn btn-danger">Delete</a></td>
     </tr>
     </tbody>
 </table>

@@ -16,9 +16,31 @@ export class DepartmentsComponent implements OnInit {
     departments: Observable<Department[]>;
     errorMessage: any;
 
+    getDepartments(){
+        this.departments=this.departmentService.getDepartments();
+    }
 
     ngOnInit() {
-        this.departments=this.departmentService.getDepartments();
+       this.getDepartments();
+    }
+
+    deleteDepartment(department) {
+
+        let response=
+            this.departmentService.deleteDepartment(department.id)
+                .subscribe(() =>{
+
+                    this.getDepartments();
+                    alert(`Department with ${department.name} Deleted`);
+
+                    },
+                    err => {
+                        alert("Could not delete the user.");
+                    });
+
+
+
+
     }
 
 }

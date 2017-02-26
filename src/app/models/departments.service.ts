@@ -7,18 +7,27 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class DepartmentsService {
 
-  private apiUrl : string = 'http://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/departments';
+  private apiUrl : string = 'http://localhost:1337/departments';
 
   constructor(private http: Http) { }
 
   getDepartments(){
-
 
     return this.http.get(this.apiUrl)
         .map(this.extractData)
         .catch(this.handleError);
 
   }
+
+  deleteDepartment(departmentId) {
+
+    return this.http.delete(`http://localhost:1337/department/${departmentId}`)
+        .map(res => res.json)
+        .catch(this.handleError);
+
+
+  }
+
 
   private extractData(res: Response) {
     let body = <Department[]>res.json();

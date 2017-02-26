@@ -109,7 +109,15 @@ the http calls in a shared Service.
 ## Step 2: Play around and generate questions
 
  ### Q: How does http work?
+   
+  - request(url: string | Request, options? :RequestOptions) :
+   Observable<Response>
   
+  - It performs any type of http request.
+  
+  - get(url : string, body:any, options?: RequestOptionsArgs) : Observable<Response>
+  
+ 
  ### Q: How does observable work?
      
  ### Q: How does rxjs work?
