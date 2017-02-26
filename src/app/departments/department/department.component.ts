@@ -3,8 +3,8 @@ import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'bg-department',
-  templateUrl: './department.component.html',
-  styleUrls: ['./department.component.css']
+  templateUrl: 'department.component.html',
+  styleUrls: ['department.component.css']
 })
 export class DepartmentComponent implements OnInit {
 

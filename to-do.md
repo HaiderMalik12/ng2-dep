@@ -127,6 +127,8 @@ the http calls in a shared Service.
     
  ### Q: What is map and catch in rxjs?
  
+ - Map is used to transform value in another array.
+ 
  ### Q: What is async pipe ?
  
  - The Async pipe received a promise or observables as
@@ -143,6 +145,4 @@ the http calls in a shared Service.
 
 
 -----
-1. Implement Async Pipe with Observables 
-2. Create a seaprate file for rxExtensions
-
+1. Replace department with department-form component
