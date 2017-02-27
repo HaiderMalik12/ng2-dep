@@ -1,43 +1,59 @@
-<form class="form-horizontal" novalidate>
-  <fieldset>
-    <div class="form-group">
-      <label for="inputName" class="col-lg-2 control-label">Name</label>
-      <div class="col-lg-10">
-        <input
-                type="text"
-                class="form-control"
-                id="inputName"
-                placeholder="Department Name"
-                [(ngModel)]="department.name"
-                name="depName"
-                required
-                #name="ngModel">
-      </div>
-       <div
-               [hidden] ="name.valid || name.pristine"
-               class="alert alert-danger">Department name is required</div>
-    </div>
+<form class="form-horizontal" novalidate (ngSubmit)="onSubmit()" #depForm="ngForm">
+    <fieldset>
+        <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+                <input
+                        type="text"
+                        class="form-control"
+                        id="inputName"
+                        placeholder="Department Name"
+                        [(ngModel)]="department.name"
+                        name="depName"
+                        required
+                        #name="ngModel">
+            </div>
+            <div [hidden]="name.valid || name.pristine"
+                 class="alert alert-danger">Department name is required
+            </div>
+        </div>
 
-    <div class="form-group">
-      <label for="inputLocation" class="col-lg-2 control-label">Location</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputLocation" placeholder="Location" [(ngModel)]="department.location" name="depLoc">
-      </div>
-    </div>
+        <div class="form-group">
+            <label for="inputLocation" class="col-lg-2 control-label">Location</label>
+            <div class="col-lg-10">
+                <input type="text"
+                       class="form-control"
+                       id="inputLocation"
+                       placeholder="Location"
+                       [(ngModel)]="department.location"
+                       name="depLoc"
+                       required
+                       #loc="ngModel">
+            </div>
+            <div [hidden]="loc.valid || loc.pristine"
+                 class="alert-danger alert">
+                Department Location is required
+            </div>
+        </div>
 
-    <div class="form-group">
-      <label for="inputBlock" class="col-lg-2 control-label">Block</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputBlock" placeholder="Block" [(ngModel)]="department.block" name="depBlock">
-      </div>
-    </div>
+        <div class="form-group">
+            <label for="inputBlock" class="col-lg-2 control-label">Block</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputBlock" placeholder="Block"
+                       [(ngModel)]="department.block" name="depBlock">
+            </div>
+        </div>
 
-     <br>
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary" (click)="saveDepartment(department)" >Save</button>
-      </div>
-    </div>
-  </fieldset>
+        <br>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default" (click)="depForm.reset()">Cancel</button>
+                <button
+                        [disabled]="!depForm.form.valid"
+                        type="submit" class="btn btn-primary"
+                        (click)="saveDepartment(department); depForm.reset()">Save
+                </button>
+            </div>
+        </div>
+    </fieldset>
 </form>

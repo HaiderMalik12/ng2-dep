@@ -3,7 +3,7 @@ export class Department {
     constructor(public id: number,
                 public name: string,
                 public location: string,
-                public block: string) {
+                public block?: string) {
     }
 
 }
