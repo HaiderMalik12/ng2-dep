@@ -1,6 +1,9 @@
-export  class Department {
-    id : number;
-    name: string;
-    location: string;
-    block:string;
+export class Department {
+
+    constructor(public id: number,
+                public name: string,
+                public location: string,
+                public block: string) {
+    }
+
 }

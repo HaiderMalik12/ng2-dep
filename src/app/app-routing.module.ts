@@ -27,5 +27,6 @@ export const routableComponents = [
     AppComponent,
     DepartmentsComponent,
     DepartmentComponent,
+    DepartmentFormComponent,
     DepartmentFormComponent
 ];

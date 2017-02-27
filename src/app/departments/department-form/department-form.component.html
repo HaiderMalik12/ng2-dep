@@ -3,8 +3,19 @@
     <div class="form-group">
       <label for="inputName" class="col-lg-2 control-label">Name</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputName" placeholder="Department Name" [(ngModel)]="department.name" name="depName">
+        <input
+                type="text"
+                class="form-control"
+                id="inputName"
+                placeholder="Department Name"
+                [(ngModel)]="department.name"
+                name="depName"
+                required
+                #name="ngModel">
       </div>
+       <div
+               [hidden] ="name.valid || name.pristine"
+               class="alert alert-danger">Department name is required</div>
     </div>
 
     <div class="form-group">

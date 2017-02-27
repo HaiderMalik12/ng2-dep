@@ -27,8 +27,6 @@ export class DepartmentsService {
 
   createDepartment(department){
 
-    //call the http post method
-
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
@@ -40,7 +38,7 @@ export class DepartmentsService {
 
   deleteDepartment(departmentId) {
 
-    return this.http.delete(`${this.apiUrl}/departments/${departmentId}`)
+    return this.http.delete(`${this.apiUrl}/department/${departmentId}`)
         .map(res => res.json)
         .catch(this.handleError);
 

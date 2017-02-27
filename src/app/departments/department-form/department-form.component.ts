@@ -20,6 +20,7 @@ export class DepartmentFormComponent implements OnInit {
         name: '', block: '', location: ''
     };
 
+
     saveDepartment(department) {
         this.departmentService.createDepartment(department)
             .subscribe(() => {
@@ -29,5 +30,6 @@ export class DepartmentFormComponent implements OnInit {
                     alert(err);
                 })
     }
+
 
 }

@@ -8,16 +8,16 @@ import {AppComponent} from './app.component';
 import {NavComponent} from './nav/nav.component';
 import {AppRoutingModule, routableComponents} from "./app-routing.module";
 import {DepartmentsService} from "./models/departments.service";
-import { DepartmentFormComponent } from './departments/department-form/department-form.component';
+
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
-        FormsModule,
+         FormsModule,
         AppRoutingModule
     ],
-    declarations: [NavComponent, routableComponents, DepartmentFormComponent],
+    declarations: [NavComponent, routableComponents],
     bootstrap: [AppComponent],
     providers:[DepartmentsService]
 })
