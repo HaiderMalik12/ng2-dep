@@ -16,7 +16,7 @@ export class DepartmentFormComponent implements OnInit {
     ngOnInit() {
     }
 
-    department= new Department(null,'','','');
+    department= new Department(null,'','','','');
 
     saveDepartment(department) {
         this.departmentService.createDepartment(department)

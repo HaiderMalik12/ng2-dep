@@ -37,6 +37,24 @@
         </div>
 
         <div class="form-group">
+            <label for="inputUsername" class="col-lg-2 control-label">User Name</label>
+            <div class="col-lg-10">
+                <input type="text"
+                       class="form-control"
+                       id="inputUsername"
+                       placeholder="User name"
+                       [(ngModel)]="department.username"
+                       name="user_name"
+                       required
+                       #loc="ngModel">
+            </div>
+            <div [hidden]="loc.valid || loc.pristine"
+                 class="alert-danger alert">
+                User name is required
+            </div>
+        </div>
+
+        <div class="form-group">
             <label for="inputBlock" class="col-lg-2 control-label">Block</label>
             <div class="col-lg-10">
                 <input type="text" class="form-control" id="inputBlock" placeholder="Block"
