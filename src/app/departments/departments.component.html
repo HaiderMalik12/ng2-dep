@@ -7,6 +7,7 @@
         <th>Location</th>
         <th>Block</th>
         <th>Delete</th>
+        <th>Users</th>
     </tr>
     </thead>
     <tbody>
@@ -15,6 +16,8 @@
         <td>{{dep.location}}</td>
         <td>{{dep.block}}</td>
         <td><a (click)="deleteDepartment(dep)" class="btn btn-danger">Delete</a></td>
+        <td><a [routerLink]="['/departments', dep.id,'users']"
+               class="btn btn-primary">View</a></td>
     </tr>
     </tbody>
 </table>
