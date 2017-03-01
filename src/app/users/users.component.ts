@@ -12,8 +12,19 @@ export class UsersComponent implements OnInit {
   constructor(private depService:DepartmentsService,
              private route: ActivatedRoute) { }
 
+
+  users : any = [];
+
   ngOnInit() {
-    console.log(this.route.snapshot.params['id']);
+        this.depService.getUsers(this.route.snapshot.params['id'])
+            .subscribe(
+                dep => this.users = dep.users, //Bind to view
+                err => {
+                  // Log errors if any
+                  console.log(err);
+                });
   }
+
+
 
 }
