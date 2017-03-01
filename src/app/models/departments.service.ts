@@ -11,6 +11,11 @@ export class DepartmentsService {
 
   constructor(private http: Http) { }
 
+
+  /**
+   * Get all the departments from server
+   * @return {Observable<R>}
+   */
   getDepartments(){
 
     return this.http.get(`${this.apiUrl}/departments`)
@@ -36,6 +41,12 @@ export class DepartmentsService {
 
   }
 
+  /**
+   * This method will delete the department in the server
+   * @param departmentId
+   * @return {Observable<R>}
+   */
+
   deleteDepartment(departmentId) {
 
     return this.http.delete(`${this.apiUrl}/department/${departmentId}`)
@@ -43,6 +54,17 @@ export class DepartmentsService {
         .catch(this.handleError);
 
 
+  }
+
+  /**
+   * This method will find all the users against each department
+   * @param depId
+   * @return {Observable<R>}
+   */
+  getUsers(depId:number){
+    return this.http.get(`${this.apiUrl}/department/${depId}/users`)
+        .map(res => res.json())
+        .catch(this.handleError);
   }
 
 
