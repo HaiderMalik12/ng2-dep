@@ -1,4 +1,23 @@
-<h1>Hello Users</h1>
-<div *ngFor="let user of users">
-  <span class="badge">{{user.name}}</span>
+<div *ngIf="users.length">
+    <table class="table table-striped table-hover ">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.address}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <h2 *ngIf="users.length ==0 || !users">
+        This department does not have any user.
+    </h2>
 </div>

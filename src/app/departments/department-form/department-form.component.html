@@ -46,14 +46,50 @@
                        [(ngModel)]="department.username"
                        name="user_name"
                        required
-                       #loc="ngModel">
+                       #name="ngModel">
             </div>
-            <div [hidden]="loc.valid || loc.pristine"
+            <div [hidden]="name.valid || name.pristine"
                  class="alert-danger alert">
                 User name is required
             </div>
         </div>
 
+
+        <div class="form-group">
+            <label for="inputAge" class="col-lg-2 control-label">User Age</label>
+            <div class="col-lg-10">
+                <input type="text"
+                       class="form-control"
+                       id="inputAge"
+                       placeholder="User Age"
+                       [(ngModel)]="department.userAge"
+                       name="user_age"
+                       required
+                       #age="ngModel">
+            </div>
+            <div [hidden]="age.valid || age.pristine"
+                 class="alert-danger alert">
+                User Age is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputAdd" class="col-lg-2 control-label">User Address</label>
+            <div class="col-lg-10">
+                <input type="text"
+                       class="form-control"
+                       id="inputAdd"
+                       placeholder="User Address"
+                       [(ngModel)]="department.userAddress"
+                       name="user_address"
+                       required
+                       #add="ngModel">
+            </div>
+            <div [hidden]="add.valid || add.pristine"
+                 class="alert-danger alert">
+                User Address is required
+            </div>
+        </div>
         <div class="form-group">
             <label for="inputBlock" class="col-lg-2 control-label">Block</label>
             <div class="col-lg-10">

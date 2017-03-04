@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit,ViewContainerRef} from '@angular/core';
 import {DepartmentsService} from "../models/departments.service";
 import {Department} from "../models/department.model";
 import {Observable} from "rxjs";
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
     selector: 'bg-departments',
@@ -10,7 +12,12 @@ import {Observable} from "rxjs";
 })
 export class DepartmentsComponent implements OnInit {
 
-    constructor(private departmentService: DepartmentsService) {
+    constructor(private departmentService: DepartmentsService,
+                public toastr : ToastsManager,
+                vcr: ViewContainerRef) {
+
+        this.toastr.setRootViewContainerRef(vcr);
+
     }
 
     departments: Observable<Department[]>;
@@ -31,11 +38,12 @@ export class DepartmentsComponent implements OnInit {
                 .subscribe(() =>{
 
                     this.getDepartments();
-                    alert(`Department with ${department.name} Deleted`);
+                    this.toastr.success('Department has been deleted!','Success!');
 
                     },
                     err => {
-                        alert("Could not delete the user.");
+                        console.error(err);
+                        this.toastr.error('Error while deleting department', 'Oops!');
                     });
 
 

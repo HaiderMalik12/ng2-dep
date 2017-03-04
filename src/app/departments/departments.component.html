@@ -1,23 +1,29 @@
 <br/>
-<a [routerLink]="'/department/add'" class="btn btn-default btn-primary">Add Department</a> <hr/>
-<table class="table table-striped table-hover ">
-    <thead>
-    <tr>
-        <th>Department Name</th>
-        <th>Location</th>
-        <th>Block</th>
-        <th>Delete</th>
-        <th>Users</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let dep of departments | async">
-        <td>{{dep.name}}</td>
-        <td>{{dep.location}}</td>
-        <td>{{dep.block}}</td>
-        <td><a (click)="deleteDepartment(dep)" class="btn btn-danger">Delete</a></td>
-        <td><a [routerLink]="['/departments', dep.id,'users']"
-               class="btn btn-primary">View</a></td>
-    </tr>
-    </tbody>
-</table>
+<a [routerLink]="'/department/add'" class="btn btn-default btn-primary">Add Department</a>
+<hr/>
+<div *ngIf="departments">
+    <table class="table table-striped table-hover ">
+        <thead>
+        <tr>
+            <th>Department Name</th>
+            <th>Location</th>
+            <th>Block</th>
+            <th>Delete</th>
+            <th>Users</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let dep of departments | async">
+            <td>{{dep.name}}</td>
+            <td>{{dep.location}}</td>
+            <td>{{dep.block}}</td>
+            <td><a (click)="deleteDepartment(dep)" class="btn btn-danger">Delete</a></td>
+            <td><a [routerLink]="['/departments', dep.id,'users']"
+                   class="btn btn-primary">View</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="departments.length ==0 || !departments">
+    <h2>There is no department in your list please add new Department</h2>
+</div>

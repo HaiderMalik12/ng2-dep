@@ -4,6 +4,8 @@ export class Department {
                 public name: string,
                 public location: string,
                 public username:string,
+                public userAge:number,
+                public userAddress:string ,
                 public block?: string) {
     }
 

@@ -19,7 +19,7 @@ export class DepartmentFormComponent implements OnInit {
     ngOnInit() {
     }
 
-    department= new Department(null,'','','','');
+    department= new Department(null,'','','',null,'');
 
     saveDepartment(department) {
         this.departmentService.createDepartment(department)
@@ -27,7 +27,7 @@ export class DepartmentFormComponent implements OnInit {
                   this.toastr.success('New department has been created successfully!','Success!');
                 },
                 err => {
-                    alert(err);
+                    this.toastr.error('Error while creating department', 'Oops!');
                 })
     }
 
